@@ -1,0 +1,25 @@
+{
+  "name": "vision_frontend",
+  "version": "1.0.0",
+  "description": "Frontend for UAS at UCLA vision.",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clumsyndicate/vision_frontend.git"
+  },
+  "author": "Johnson Zhou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clumsyndicate/vision_frontend/issues"
+  },
+  "homepage": "https://github.com/Clumsyndicate/vision_frontend#readme",
+  "dependencies": {
+    "@material/switch": "^4.0.0"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules/
+assets/
+__pycache__
+flight-backend/vision_backend/

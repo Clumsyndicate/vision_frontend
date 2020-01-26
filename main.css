@@ -1,0 +1,114 @@
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+height: 100%;
+}
+
+.pop-up .photo-list {
+    width: 40%;
+    background-color: darkgrey;
+    height: 100%;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.pop-up .photo-list img {
+    /*
+    margin: 1rem;
+    object-fit: cover;
+    width: 10rem; */
+    max-width:100%;
+    max-height:100%;
+    height: auto;
+    margin-top: 1rem;
+}
+.pop-up .details {
+    width: 80%;
+}
+
+
+.cog-background {
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 24px;
+    background-color: rgba(160, 160, 160, 0.5);
+    text-align:center;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    transition: all .2s ease-in-out;
+
+}
+
+
+
+.cog-background i {
+    z-index: 15;
+    margin: 0;
+    position: absolute;
+    /*
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)    
+    */
+    bottom: 8px;
+    left: 8px;
+}
+
+.expand {
+    width: 20rem;
+    height: 10rem;
+    padding: 2rem;
+}
+
+label {
+    margin-left: 1rem;
+}
+
+.mdc-text-field {
+    margin-top: 1rem;
+}
+
+.settings {
+    z-index: 10;
+    bottom: 2rem;
+    left: 2rem;
+    position: absolute;
+
+}
+
+.settings-content {
+    position: absolute;
+    height: 20rem;
+    width: 10rem;
+    /*background-color: darkgrey; */
+}
+
+.collpasible {
+    cursor: pointer;
+    
+}
+
+
+.pop-up {
+    position: absolute;
+    width:50%;
+    height:50%;
+    background-color: white;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    outline: 1px solid #ccc;
+
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+font-family: 'Source Sans Pro', sans-serif;
+
+}
