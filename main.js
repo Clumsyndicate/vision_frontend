@@ -1,8 +1,14 @@
+var currentLocation = {lat: 34.0689, lng: -118.4452};
+
 
 $('.pop-up').resizable({
     handles: 'n,w,s,e',
     minWidth: $( window ).width() / 10,
     maxWidth: $( window ).width()
+});
+
+$('.details').resizable({
+    handles: 'n,w,s,e',
 });
 
 $('.settings-content').hide();
@@ -26,6 +32,19 @@ $('.cog-background i').on('click', () => {
 const switchControl = new mdc.switchControl.MDCSwitch(document.querySelector('.mdc-switch'));
 const textField1 = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#LAT'));
  const textField2 = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#LNG'));
+ const buttonRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button'));
+
+$('.mdc-button').on('click', () => {
+    var lat = $('.mdc-text-field#LAT input').val();
+    var lng = $('.mdc-text-field#LNG input').val();
+    if ((double(lat)) && (double(lng))) {
+        currentLocation = {lat: double(lat), lng: double(lng)};
+        changeFocus(currentLocation);
+    }
+});
+
+$('.mdc-text-field#LAT input').val(currentLocation.lat);
+$('.mdc-text-field#LNG input').val(currentLocation.lng);
 
 $('#night-switch').on('change', () => {
     if ($('#night-switch').is(':checked')) {
@@ -40,7 +59,7 @@ var drawingManager;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 34.0689, lng: -118.4452},
+        center: currentLocation,
         zoom: 16
     });
     drawingManager = new google.maps.drawing.DrawingManager({
