@@ -17,13 +17,15 @@ $('.cog-background i').on('click', () => {
         $('.cog-background').addClass('expand');
         $('.settings-content').show();
     }
+    $(this).toggleClass('rotate');
+
 });
 
 // import {MDCSwitch} from '@material/switch';
 
 const switchControl = new mdc.switchControl.MDCSwitch(document.querySelector('.mdc-switch'));
 const textField1 = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#LAT'));
-const textField2 = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#LNG'));
+ const textField2 = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#LNG'));
 
 $('#night-switch').on('change', () => {
     if ($('#night-switch').is(':checked')) {

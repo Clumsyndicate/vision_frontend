@@ -4,6 +4,17 @@
 height: 100%;
 }
 
+.focus-control {
+    display: inline-flex;
+    left: 0;
+    right:0;
+}
+
+.focus-control .mdc-text-field {
+    margin-right: 2rem;
+    width: 8rem;
+}
+
 .pop-up .photo-list {
     width: 40%;
     background-color: darkgrey;
@@ -39,6 +50,7 @@ height: 100%;
     cursor: pointer;
     padding: 0;
     transition: all .2s ease-in-out;
+    
 
 }
 
@@ -58,8 +70,14 @@ height: 100%;
     left: 8px;
 }
 
+.rotate {
+    transform: rotate(360deg);
+    transition: all 1s ease-in;
+  }
+
+
 .expand {
-    width: 20rem;
+    width: 25rem;
     height: 10rem;
     padding: 2rem;
 }
@@ -110,5 +128,7 @@ height: 100%;
 margin: 0;
 padding: 0;
 font-family: 'Source Sans Pro', sans-serif;
+
+overflow: hidden;
 
 }

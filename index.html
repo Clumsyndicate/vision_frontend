@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="settings collapsible">
-        <div class="cog-background"><i class="fas fa-cog fa-2x"></i>
+        <div class="cog-background"><i class="fas fa-cog fa-2x cog-btn"></i>
           <div class="settings-content">
             <div class="mdc-switch">
             <div class="mdc-switch__track"></div>
@@ -35,15 +35,19 @@
             </div>
             </div>
             <label for="night-switch">Night mode</label>
-            <div class="mdc-text-field" id="LAT">
-              <input type="text" id="latitude" class="input">
-              <label class="mdc-floating-label" for="my-text-field">Latitude</label>
-              <div class="mdc-line-ripple"></div>
-            </div>
-            <div class="mdc-text-field" id="LNG">
-              <input type="text" id="longitude" class="input">
-              <label class="mdc-floating-label" for="my-text-field">Longitude</label>
-              <div class="mdc-line-ripple"></div>
+            
+            <div class="focus-control">
+              <div class="mdc-text-field" id="LAT">
+                <input class="mdc-text-field__input" id="text-field-hero-input">
+                <div class="mdc-line-ripple"></div>
+                <label for="text-field-hero-input" class="mdc-floating-label">Latitude</label>
+              </div>
+              
+              <div class="mdc-text-field" id="LNG">
+                <input class="mdc-text-field__input" id="text-field-hero-input">
+                <div class="mdc-line-ripple"></div>
+                <label for="text-field-hero-input" class="mdc-floating-label">Longitude</label>
+              </div>
             </div>
             
         </div>
