@@ -30,7 +30,9 @@ function loadImageDetails(n) {
       <div class="mdc-button__ripple"></div>
       <span class="mdc-button__label">Save</span>
     </button>`
-    $('.details').append(str)
+    $('.details').append(str);
+    const textFieldShape = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#shape'));
+    const textFieldColor = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#color'));
 }
 
 $(".panel-left").resizable({
@@ -74,8 +76,8 @@ const textField2 = new mdc.textField.MDCTextField(document.querySelector('.mdc-t
 const coordinateButton = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button#coordinate'));
 const saveButton = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button#save'));
 const switchControl1 = new mdc.switchControl.MDCSwitch(document.querySelector('.mdc-switch#drawing-mode'));
-const textFieldShape = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#shape'));
-const textFieldColor = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#color'));
+var textFieldShape = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#shape'));
+var textFieldColor = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#color'));
 
 
 $('.mdc-button#coordinate').on('click', () => {
