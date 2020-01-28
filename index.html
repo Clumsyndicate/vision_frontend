@@ -1,74 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+<head>
+  <title>Simple Map</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
 
-    <link rel="stylesheet" href="main.css">
-    <script src="https://kit.fontawesome.com/fa88091da7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
-  </head>
-  <body>
-    <div id="map"></div>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://kit.fontawesome.com/fa88091da7.js" crossorigin="anonymous"></script>
 
-    <div class="pop-up">
-        <div class="photo-list">
-            <img src="assets/Real World Data/2019-04-27 Flight Test/Video 4665 1Hz/image-01.jpeg" alt="">
-        </div>
-        <div class="details">
+</head>
 
-        </div>
+<body>
+  <div id="map"></div>
+
+  <div class="pop-up" id="container">
+    <div class="photo-list">
+      <h3>Images</h3>
+
     </div>
-    <div class="settings collapsible">
-        <div class="cog-background"><i class="fas fa-cog fa-2x cog-btn"></i>
-          <div class="settings-content">
-            <div class="mdc-switch" id="night-mode">
-            <div class="mdc-switch__track"></div>
-            <div class="mdc-switch__thumb-underlay">
-                <div class="mdc-switch__thumb">
-                    <input type="checkbox" id="night-switch" class="mdc-switch__native-control" role="switch">
-                </div>
-            </div>
-            </div>
-            <label for="night-switch">Night mode</label>
-            
-            <div class="focus-control">
-              <div class="mdc-text-field" id="LAT">
-                <input class="mdc-text-field__input" id="text-field-hero-input">
-                <div class="mdc-line-ripple"></div>
-                <label for="text-field-hero-input" class="mdc-floating-label mdc-floating-label--float-above">Latitude</label>
-              </div>
-              
-              <div class="mdc-text-field" id="LNG">
-                <input class="mdc-text-field__input" id="text-field-hero-input">
-                <div class="mdc-line-ripple"></div>
-                <label for="text-field-hero-input" class="mdc-floating-label mdc-floating-label--float-above">Longitude</label>
-              </div>
-              <button class="mdc-button">
-                <div class="mdc-button__ripple"></div>
-                <span class="mdc-button__label">Set coordinates</span>
-              </button>
-            </div>
-
-            <div class="mdc-switch" id="drawing-mode">
-              <div class="mdc-switch__track"></div>
-              <div class="mdc-switch__thumb-underlay">
-                  <div class="mdc-switch__thumb">
-                      <input type="checkbox" id="drawing-switch" class="mdc-switch__native-control" role="switch">
-                  </div>
-              </div>
-              </div>
-              <label for="drawing-switch">Enable Waypoint Marking</label>
-            
-        </div>
-        </div>
-        
+    <div class="details">
+      <img class="large-image" src="assets/Real World Data/2019-04-27 Flight Test/Video 4665 1Hz/image-01.jpeg" alt="">
+      <p>Latitude: 1000</p>
+      <p>Longitude: 1000</p>
+      <div class="mdc-text-field" id="shape">
+        <input type="text" id="my-text-field" class="mdc-text-field__input">
+        <label class="mdc-floating-label" for="my-text-field">Shape</label>
+        <div class="mdc-line-ripple"></div>
+      </div>
+      <div class="mdc-text-field" id="color">
+        <input type="text" id="my-text-field" class="mdc-text-field__input">
+        <label class="mdc-floating-label" for="my-text-field">Color</label>
+        <div class="mdc-line-ripple"></div>
+      </div>
+      <button class="mdc-button" id="save">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Save</span>
+      </button>
     </div>
-    <scripts>
+  </div>
+  <div class="settings collapsible">
+    <div class="cog-background"><i class="fas fa-cog fa-2x cog-btn"></i>
+      <div class="settings-content">
+        <div class="mdc-switch" id="night-mode">
+          <div class="mdc-switch__track"></div>
+          <div class="mdc-switch__thumb-underlay">
+            <div class="mdc-switch__thumb">
+              <input type="checkbox" id="night-switch" class="mdc-switch__native-control" role="switch">
+            </div>
+          </div>
+        </div>
+        <label for="night-switch">Night mode</label>
+
+        <div class="focus-control">
+          <div class="mdc-text-field" id="LAT">
+            <input class="mdc-text-field__input" id="text-field-hero-input">
+            <div class="mdc-line-ripple"></div>
+            <label for="text-field-hero-input"
+              class="mdc-floating-label mdc-floating-label--float-above">Latitude</label>
+          </div>
+
+          <div class="mdc-text-field" id="LNG">
+            <input class="mdc-text-field__input" id="text-field-hero-input">
+            <div class="mdc-line-ripple"></div>
+            <label for="text-field-hero-input"
+              class="mdc-floating-label mdc-floating-label--float-above">Longitude</label>
+          </div>
+          <button class="mdc-button" id="coordinate">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Set coordinates</span>
+          </button>
+        </div>
+
+        <div class="mdc-switch" id="drawing-mode">
+          <div class="mdc-switch__track"></div>
+          <div class="mdc-switch__thumb-underlay">
+            <div class="mdc-switch__thumb">
+              <input type="checkbox" id="drawing-switch" class="mdc-switch__native-control" role="switch">
+            </div>
+          </div>
+        </div>
+        <label for="drawing-switch">Enable Waypoint Marking</label>
+
+      </div>
+    </div>
+
+  </div>
+  <scripts>
     <script src="lib/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -78,9 +99,11 @@
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
     <script src="main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZPTNbgu1tvt6tz3aMeFsKZj9wn5adNvU&libraries=drawing&callback=initMap"
-    async defer></script>
-    </scripts>
-    
-  </body>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZPTNbgu1tvt6tz3aMeFsKZj9wn5adNvU&libraries=drawing&callback=initMap"
+      async defer></script>
+  </scripts>
+
+</body>
+
 </html>
