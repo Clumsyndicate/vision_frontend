@@ -26,7 +26,7 @@
     <div class="settings collapsible">
         <div class="cog-background"><i class="fas fa-cog fa-2x cog-btn"></i>
           <div class="settings-content">
-            <div class="mdc-switch">
+            <div class="mdc-switch" id="night-mode">
             <div class="mdc-switch__track"></div>
             <div class="mdc-switch__thumb-underlay">
                 <div class="mdc-switch__thumb">
@@ -40,24 +40,35 @@
               <div class="mdc-text-field" id="LAT">
                 <input class="mdc-text-field__input" id="text-field-hero-input">
                 <div class="mdc-line-ripple"></div>
-                <label for="text-field-hero-input" class="mdc-floating-label">Latitude</label>
+                <label for="text-field-hero-input" class="mdc-floating-label mdc-floating-label--float-above">Latitude</label>
               </div>
               
               <div class="mdc-text-field" id="LNG">
                 <input class="mdc-text-field__input" id="text-field-hero-input">
                 <div class="mdc-line-ripple"></div>
-                <label for="text-field-hero-input" class="mdc-floating-label">Longitude</label>
+                <label for="text-field-hero-input" class="mdc-floating-label mdc-floating-label--float-above">Longitude</label>
               </div>
               <button class="mdc-button">
                 <div class="mdc-button__ripple"></div>
                 <span class="mdc-button__label">Set coordinates</span>
               </button>
             </div>
+
+            <div class="mdc-switch" id="drawing-mode">
+              <div class="mdc-switch__track"></div>
+              <div class="mdc-switch__thumb-underlay">
+                  <div class="mdc-switch__thumb">
+                      <input type="checkbox" id="drawing-switch" class="mdc-switch__native-control" role="switch">
+                  </div>
+              </div>
+              </div>
+              <label for="drawing-switch">Enable Waypoint Marking</label>
             
         </div>
         </div>
         
     </div>
+    <scripts>
     <script src="lib/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -69,5 +80,7 @@
     <script src="main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZPTNbgu1tvt6tz3aMeFsKZj9wn5adNvU&libraries=drawing&callback=initMap"
     async defer></script>
+    </scripts>
+    
   </body>
 </html>

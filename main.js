@@ -29,16 +29,18 @@ $('.cog-background i').on('click', () => {
 
 // import {MDCSwitch} from '@material/switch';
 
-const switchControl = new mdc.switchControl.MDCSwitch(document.querySelector('.mdc-switch'));
+const switchControl = new mdc.switchControl.MDCSwitch(document.querySelector('.mdc-switch#night-mode'));
 const textField1 = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#LAT'));
- const textField2 = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#LNG'));
- const buttonRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button'));
+const textField2 = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field#LNG'));
+const buttonRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button'));
+const switchControl1 = new mdc.switchControl.MDCSwitch(document.querySelector('.mdc-switch#drawing-mode'));
+
 
 $('.mdc-button').on('click', () => {
     var lat = $('.mdc-text-field#LAT input').val();
     var lng = $('.mdc-text-field#LNG input').val();
-    if ((double(lat)) && (double(lng))) {
-        currentLocation = {lat: double(lat), lng: double(lng)};
+    if ((parseFloat(lat)) && (parseFloat(lng))) {
+        currentLocation = {lat: parseFloat(lat), lng: parseFloat(lng)};
         changeFocus(currentLocation);
     }
 });
