@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Clumsyndicate/vision_frontend#readme",
   "dependencies": {
-    "@material/switch": "^4.0.0"
+    "@material/switch": "^4.0.0",
+    "sass": "^1.25.0"
   }
 }

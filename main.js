@@ -147,7 +147,7 @@ function initMap() {
         if (event.type == 'circle') {
             var radius = event.overlay.getRadius();
         } else if (event.type == 'marker') {
-            console.log(event.overlay.position.lat());
+            console.log(event.overlay.position.lat() + "  " + event.overlay.position.lng() );
         }
       });
 }
@@ -290,3 +290,8 @@ function getPhotoStream(wayPoint) {
 
 }
 */  
+
+function random(x1, x2) {
+    var diff = x2 - x1;
+    return x1 + diff * Math.random();
+}
