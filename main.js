@@ -87,7 +87,7 @@ $('.mdc-button#coordinate').on('click', () => {
         currentLocation = {lat: parseFloat(lat), lng: parseFloat(lng)};
         changeFocus(currentLocation);
     }
-    alert( $(this).name );
+    // alert( $(this).name );
 
 });
 
