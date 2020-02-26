@@ -112,4 +112,16 @@ body {
             }
         }
     }
+
+    label {
+        margin-left: 1rem;
+    }
+
+    .mdc-text-field {
+        margin-top: 1rem;
+    }
+
+    .collpasible {
+        cursor: pointer;
+    }
 }
