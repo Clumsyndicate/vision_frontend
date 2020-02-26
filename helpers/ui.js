@@ -117,7 +117,7 @@ $('.mdc-button#coordinate').on('click', () => {
 
 var drawing = true;
 
-$('.mdc-button#drawing-mode').on('click', () => {
+$('.mdc-switch#drawing-mode').on('click', () => {
     console.log($(this));
     if (drawing) {
         drawing = false;
@@ -141,3 +141,7 @@ $('#night-switch').on('change', () => {
 
 addImages(image_load_count);
 // addCallBacks();
+
+window.addEventListener("resize", function(event) {
+  console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+})
