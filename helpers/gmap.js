@@ -30,7 +30,7 @@ function initMap() {
         zIndex: 1
         }
     });
-    drawingManager.setMap(map);
+    drawingManager.setMap(null);
 
     google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
         console.log(event.type);
@@ -48,10 +48,12 @@ export function changeDrawing(hide) {
         drawingManager.setOptions({
             drawingControl: false
           });
+          drawingManager.setMap(null);
     } else {
         drawingManager.setOptions({
             drawingControl: true
           });
+          drawingManager.setMap(map);
     }
 }
 
